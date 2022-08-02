@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
-
+const PORT = 5001
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
@@ -15,6 +15,6 @@ app.get("/", (req,res)=>{
 });
 
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server running at ${process.env.PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server running at ${PORT}`);
 });
